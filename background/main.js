@@ -81,6 +81,9 @@ chrome.runtime.onMessageExternal.addListener(
           case 'CityMapService':
             cityMap.process(response.requestMethod, response.responseData, response.requestId)
             break
+          case 'ClanBattleService':
+            clanBattle.process(response.requestMethod, response.responseData, response.requestId)
+            break
           case 'GreatBuildingsService':
             greatBuilding.process(response.requestMethod, response.responseData, response.requestId)
             break
