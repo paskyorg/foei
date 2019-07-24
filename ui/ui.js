@@ -4,6 +4,9 @@ let currentGBRewards = { rewards: [] }
 
 chrome.extension.onMessage.addListener(
   function (request, sender, sendResponse) {
+    if (request.metadata) {
+      updateMetadata(request.metadata)
+    }
     if (request.version) {
       checkVersion(request.version)
     }
@@ -57,6 +60,18 @@ function getNotificationBootstrapClass (type) {
     'error': 'danger'
   }
   return notificationTypes2Bootstrap[type] || 'danger'
+}
+
+function updateMetadata(metadata) {
+  switch(metadata.type) {
+    case 'city_entities':
+      for (let [k, v] of Object.entries(metadata.data)) {
+        i18n[k] = v
+      }
+      break
+    case 'unit_types':
+      break
+  }
 }
 
 function checkVersion (versionInfo) {

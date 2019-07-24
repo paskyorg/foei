@@ -56,6 +56,11 @@ chrome.runtime.onMessageExternal.addListener(
       setWorldID(match[0])
     }
 
+    if (request.metadata) {
+      metadata.process(request)
+      return
+    }
+
     if (request.jsonRequest) {
       if (trace) {
         console.log('request', request.jsonRequest)

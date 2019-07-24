@@ -13,6 +13,7 @@
       "background/storage.js",
       "background/utils.js",
       "background/main.js",
+      "background/metadata.js",
       "background/battle_field.js",
       "background/city_map.js",
       "background/great_buildings.js",
