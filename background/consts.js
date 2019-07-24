@@ -20,7 +20,8 @@ const consts = {
     FutureEra: 14,
     ArcticFuture: 15,
     OceanicFuture: 16,
-    VirtualFuture: 17
+    VirtualFuture: 17,
+    SpaceAgeMars: 18
   },
 
   getGoodsAge: function (goodName) {
@@ -115,6 +116,13 @@ const consts = {
     // Progressive Era
     conscript: { name: 'Conscript', type: 'light' },
 
+    // Virtual Future
+    ninja: { name: 'Ninja', type: 'ranged' },
+    augmented_samurai: { name: 'Samurái aumentado', type: 'light' },
+    warrior_monk: { name: 'Monje guerrero', type: 'fast' },
+    ronin_bot: { name: 'Bot Ronin', type: 'heavy' },
+    rocket_troop: { name: 'Tropa de artillería de cohetes', type: 'artillery' },
+
     // All Ages
     military_drummer: { name: 'Military Drummer', type: 'drum' },
     color_guard: { name: 'Color Guard', type: 'cguard' },
@@ -127,6 +135,7 @@ const consts = {
     HighMiddleAge_champion: { name: 'Champions', type: 'champ' },
     LateMiddleAge_champion: { name: 'Champions', type: 'champ' },
     ColonialAge_champion: { name: 'Champions', type: 'champ' },
-    IndustrialAge_champion: { name: 'Champions', type: 'champ' }
+    IndustrialAge_champion: { name: 'Champions', type: 'champ' },
+    VirtualFuture_champion: { name: 'Campeón', type: 'champ' }
   }
 }

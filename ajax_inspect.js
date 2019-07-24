@@ -69,6 +69,9 @@
         if (this._url.includes('forgeofempires.com')) {
           let urlObj = new URL(this._url)
           payload.hostname = urlObj.hostname
+        } else if (this._url.includes('metadata')) {
+          let metadata = RegExp('metadata\\?id=(.*)-').exec(this._url)[1]
+          payload.metadata = metadata
         }
 
         chrome.runtime.sendMessage(extensionID, payload)
