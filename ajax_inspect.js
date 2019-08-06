@@ -70,8 +70,9 @@
           let urlObj = new URL(this._url)
           payload.hostname = urlObj.hostname
         } else if (this._url.includes('metadata')) {
-          let metadata = RegExp('metadata\\?id=(.*)-').exec(this._url)[1]
-          payload.metadata = metadata
+          let match = RegExp('https://foe(.*).innogamescdn.com/start/metadata\\?id=(.*)-').exec(this._url)
+          payload.lang = match[1]
+          payload.metadata = match[2]
         }
 
         chrome.runtime.sendMessage(extensionID, payload)
